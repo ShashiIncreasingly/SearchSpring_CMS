@@ -96,7 +96,7 @@ export default defineType({
             type: 'object',
             fields: [{
                 name: 'genericMessage',
-                title: 'GenericMessage',
+                title: 'Operation successful',
                 type: 'string'
             }, ],
             options: {

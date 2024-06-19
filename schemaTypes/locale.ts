@@ -1,9 +1,9 @@
 
 import { defineType } from 'sanity';
-import application from './translationsSchema/application';
-import breadcrumbs from './translationsSchema/breadcrumbs';
-import features from './translationsSchema/features';
-import form from './translationsSchema/form';
+import application from './translationsSchema/application/application';
+import breadcrumbs from './translationsSchema/breadcrumbs/breadcrumbs';
+import features from './translationsSchema/features/features';
+import form from './translationsSchema/form/form';
 
 export default defineType({
   name: 'locale',

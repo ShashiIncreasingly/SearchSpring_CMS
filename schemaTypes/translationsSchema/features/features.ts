@@ -15,7 +15,7 @@ export default defineType({
                 title: 'Search Behavior',
                 type: 'object',
                 fields: [{
-                    name: 'backgroundFilter',
+                    name: 'backgroundFilters',
                     title: 'Background Filter',
                     type: 'object',
                     fields: [{
@@ -36,6 +36,11 @@ export default defineType({
                         {
                             name: 'pageSubHeader',
                             title: 'Searching for any keyword in the group returns the same results for all keywords',
+                            type: 'string'
+                        },
+                        {
+                            name: 'learnMoreLink',
+                            title: 'https://help.searchspring.net/hc/en-us/articles/115002210786-Background-Filters',
                             type: 'string'
                         },
                         {
@@ -169,7 +174,7 @@ export default defineType({
                             type: 'string'
                         },
                         {
-                            name: 'deleteDialogDialogTitle',
+                            name: 'deleteDialogTitle',
                             title: 'Confirm Delete',
                             type: 'string'
                         },
@@ -184,7 +189,7 @@ export default defineType({
                             type: 'string'
                         },
                         {
-                            name: 'deleteDialogActionButtonLabel',
+                            name: 'deleteDialogActionButtonCancelLabel',
                             title: 'Cancel',
                             type: 'string'
                         },
@@ -235,37 +240,52 @@ export default defineType({
                                 type: 'string'
                             },
                             {
-                                name: 'filterListWordLabel',
+                                name: 'learnMoreLink',
+                                title: "https://help.searchspring.net/hc/en-us/articles/206986743-Exact-Match",
+                                type: 'string'
+                            },
+                            {
+                                name: 'exactMatchListWordLabel',
                                 title: "Word",
                                 type: 'string'
                             },
                             {
-                                name: 'filterListStatusLabel',
+                                name: 'exactMatchListStatusLabel',
                                 title: "Status",
                                 type: 'string'
                             },
                             {
-                                name: 'filterListMenuActionEditLabel',
+                                name: 'exactMatchListStatusEnabled',
+                                title: "Enabled",
+                                type: 'string'
+                            },
+                            {
+                                name: 'exactMatchListStatusDisabled',
+                                title: "Disabled",
+                                type: 'string'
+                            },
+                            {
+                                name: 'exactMatchListMenuActionEditLabel',
                                 title: "Edit Field",
                                 type: 'string'
                             },
                             {
-                                name: 'filterListMenuActionDeleteLabel',
+                                name: 'exactMatchListMenuActionDeleteLabel',
                                 title: "Delete Field",
                                 type: 'string'
                             },
                             {
-                                name: 'emptyFilterListTitle',
+                                name: 'emptyExactMatchListTitle',
                                 title: "Build Your Exact Match Library",
                                 type: 'string'
                             },
                             {
-                                name: 'emptyFilterListSubtitle',
+                                name: 'emptyExactMatchListSubtitle',
                                 title: "Enable similar word search, and improve search behavior by adding new fields to your search management",
                                 type: 'string'
                             },
                             {
-                                name: "addFilterButtonLabel",
+                                name: "addExactMatchButtonLabel",
                                 title: "Add Exact Match Word",
                                 type: 'string'
                             },
@@ -305,7 +325,7 @@ export default defineType({
                                 type: 'string'
                             },
                             {
-                                name: 'createFormSaveFilterButtonLabel',
+                                name: 'createFormSaveExactMatchButtonLabel',
                                 title: "Create Exact Match Word",
                                 type: 'string'
                             },
@@ -330,7 +350,7 @@ export default defineType({
                                 type: 'string'
                             },
                             {
-                                name: 'deleteDialogDialogTitle',
+                                name: 'deleteDialogTitle',
                                 title: "Confirm Delete",
                                 type: 'string'
                             },
@@ -342,6 +362,26 @@ export default defineType({
                             {
                                 name: 'deleteDialogContentConfirmationText',
                                 title: "Are you sure you want to delete this Word?",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogActionButtonCancelLabel',
+                                title: "Cancel",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogActionButtonDeleteLabel',
+                                title: "Confirm Delete",
+                                type: 'string'
+                            },
+                            {
+                                name: 'editFormSnackbarUpdateLabel',
+                                title: "Word successfully edited",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormErrorBannerLabel',
+                                title: "Error: Something went wrong. Please wait a few minutes and retry",
                                 type: 'string'
                             },
                         ],
@@ -360,8 +400,23 @@ export default defineType({
                                 type: 'string'
                             },
                             {
+                                name: 'pageDescription',
+                                title: "Ignore Terms | Search Management Console",
+                                type: 'string'
+                            },
+                            {
                                 name: 'pageHeader',
                                 title: "Ignore Terms",
+                                type: 'string'
+                            },
+                            {
+                                name: 'pageSubHeader',
+                                title: "Searching for any keyword in the group returns the same results for all keywords",
+                                type: 'string'
+                            },
+                            {
+                                name: 'learnMoreLink',
+                                title: "https://help.searchspring.net/hc/en-us/articles/206607636-Ignore-Terms",
                                 type: 'string'
                             },
                             {
@@ -400,7 +455,7 @@ export default defineType({
                                 type: 'string'
                             },
                             {
-                                name: "repacementStatusEnabled",
+                                name: "statusEnabled",
                                 title: "Enabled",
                                 type: 'string'
                             },
@@ -420,17 +475,27 @@ export default defineType({
                                 type: 'string'
                             },
                             {
-                                name: 'deleteDialogDialogTitle',
+                                name: 'deleteDialogTitle',
                                 title: "Confirm Delete",
                                 type: 'string'
                             },
                             {
-                                name: 'deleteDialogDialogContentText',
+                                name: 'deleteDialogActionButtonCancelLabel',
+                                title: "Cancel",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogActionButtonDeleteLabel',
+                                title: "Confirm Delete",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogContentText',
                                 title: "Removing a ignore term",
                                 type: 'string'
                             },
                             {
-                                name: 'deleteDialogDialogConfirmationText',
+                                name: 'deleteDialogConfirmationText',
                                 title: "Are you sure you want to delete this Ignore Term?",
                                 type: 'string'
                             },
@@ -450,33 +515,33 @@ export default defineType({
                                 type: 'string'
                             },
                             {
-                                name: 'createFormPlaceholder',
+                                name: 'createFormKeywordPlaceholder',
                                 title: "Example: Shoes",
                                 type: 'string'
                             },
                             {
-                                name: 'discardFilterButtonLabel',
+                                name: 'createFormDiscardFilterButtonLabel',
                                 title: "Discard",
                                 type: 'string'
                             },
                             {
-                                name: 'createIgnoreTermsButtonLabel',
+                                name: 'createFormCreateIgnoreTermsButtonLabel',
                                 title: "Create Ignore Term",
                                 type: 'string'
                             },
                             {
-                                name: 'editIgnoreTermsButtonLabel',
+                                name: 'createFormEditIgnoreTermsButtonLabel',
                                 title: "Edit Ignore Term",
                                 type: 'string'
                             },
                             {
-                                name: 'originalKeywordLabel',
+                                name: 'createFormOriginalKeywordLabel',
                                 title: "Keyword",
                                 type: 'string'
                             },
                             {
-                                name: 'pageSubHeader',
-                                title: "Searching for any keyword in the group returns the same results for all keywords",
+                                name: 'createFormNoteContent',
+                                title: "Add a word for the search results to ignore",
                                 type: 'string'
                             },
                             {
@@ -499,61 +564,7 @@ export default defineType({
                         name: 'queryReplacement',
                         title: 'Query Replacement',
                         type: 'object',
-                        fields: [{
-                                name: 'addFilterButtonLabel',
-                                title: "Add Query Replacement Rule",
-                                type: 'string'
-                            },
-                            {
-                                name: 'createFormCreateTitle',
-                                title: "Add Query Replacement Rule",
-                                type: 'string'
-                            },
-                            {
-                                name: 'createFormEditTitle',
-                                title: "Edit Query Replacement Rule",
-                                type: 'string'
-                            },
-                            {
-                                name: 'createFormOriginalKeywordLabel',
-                                title: "Original Keyword",
-                                type: 'string'
-                            },
-                            {
-                                name: 'createFormOriginalReplacementPlaceholder',
-                                title: "Example: Footware",
-                                type: 'string'
-                            },
-                            {
-                                name: 'createFormCreateQueryReplacementButtonLabel',
-                                title: "Create Query Replacement",
-                                type: 'string'
-                            },
-                            {
-                                name: 'createFormDiscardFilterButtonLabel',
-                                title: "Discard",
-                                type: 'string'
-                            },
-                            {
-                                name: 'createFormEditQueryReplacementButtonLabel',
-                                title: "Edit Query Replacement",
-                                type: 'string'
-                            },
-                            {
-                                name: 'snackbarSuccessLabel',
-                                title: "Query replacement successfully created",
-                                type: 'string'
-                            },
-                            {
-                                name: "noteTitle",
-                                title: "Note:",
-                                type: 'string'
-                            },
-                            {
-                                name: 'noteText',
-                                title: "  Add a replacement word like the example below to prevent the system from treating it as the same as other variations",
-                                type: 'string'
-                            },
+                        fields: [
                             {
                                 name: 'pageTitle',
                                 title: "Query Replacement | Search Management Console",
@@ -575,6 +586,126 @@ export default defineType({
                                 type: 'string'
                             },
                             {
+                                name: 'learnMoreLink',
+                                title: "https://help.searchspring.net/hc/en-us/articles/206607646-Query-Replacement",
+                                type: 'string'
+                            },
+                            {
+                                name: 'addFilterButtonLabel',
+                                title: "Add Query Replacement Rule",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormCreateTitle',
+                                title: "Add Query Replacement Rule",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormEditTitle',
+                                title: "Edit Query Replacement Rule",
+                                type: 'string'
+                            },
+                            {
+                                name: 'listSearchQueryLabel',
+                                title: "Search Query",
+                                type: 'string'
+                            },
+                            {
+                                name: 'listSearchReplacementLabel',
+                                title: "Replacement",
+                                type: 'string'
+                            },
+                            {
+                                name: 'listSearchStatusLabel',
+                                title: "Status",
+                                type: 'string'
+                            },
+                            {
+                                name: 'listSearchOptionsLabel',
+                                title: "Options",
+                                type: 'string'
+                            },
+                            {
+                                name: 'filterListMenuActionEditLabel',
+                                title: "Edit Field",
+                                type: 'string'
+                            },
+                            {
+                                name: 'filterListMenuActionDeleteLabel',
+                                title: "Delete Field",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormDeleteTitle',
+                                title: "Confirm Delete",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormCreateQueryReplacementButtonLabel',
+                                title: "Create Query Replacement",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormDiscardFilterButtonLabel',
+                                title: "Discard",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormEditQueryReplacementButtonLabel',
+                                title: "Edit Query Replacement",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormOriginalKeywordLabel',
+                                title: "Original Keyword",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormOriginalReplacementPlaceholder',
+                                title: "Example: Footware",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormSnackbarSuccessLabel',
+                                title: "Query replacement successfully created",
+                                type: 'string'
+                            },
+                            {
+                                name: 'editFormSnackbarSuccessLabel',
+                                title: "Query replacement successfully updated",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogSnackbarSuccessLabel',
+                                title: "Query replacement Deleted",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogTitle',
+                                title: "Confirm Delete",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogActionButtonCancelLabel',
+                                title: "Cancel",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogActionButtonDeleteLabel',
+                                title: "Confirm Delete",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogContentText',
+                                title: "Removing a query replacement",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogConfirmationText',
+                                title: "Are you sure you want to delete this Query Replacement?",
+                                type: 'string'
+                            },
+                            {
                                 name: 'emptyQueryReplacementListTitle',
                                 title: "Build Your Query Replacements Library",
                                 type: 'string'
@@ -585,33 +716,23 @@ export default defineType({
                                 type: 'string'
                             },
                             {
-                                name: 'deleteDialogSnackbarSuccessLabel',
-                                title: "Query replacement Deleted",
+                                name: 'addQueryReplacementButtonLabel',
+                                title: "Add Query Replacement Rule",
                                 type: 'string'
                             },
                             {
-                                name: 'deleteDialogDialogTitle',
-                                title: "Confirm Delete",
+                                name: 'createFormReplacementKeywordLabel',
+                                title: "Replacement Keyword",
                                 type: 'string'
                             },
                             {
-                                name: 'deleteDialogActionButtonLabel',
-                                title: "Cancel",
+                                name: 'replacementStatusEnabled',
+                                title: "Enabled",
                                 type: 'string'
                             },
                             {
-                                name: 'deleteDialogActionButtonDeleteLabel',
-                                title: "Confirm Delete",
-                                type: 'string'
-                            },
-                            {
-                                name: 'deleteDialogDialogContentText',
-                                title: "Removing a query replacement",
-                                type: 'string'
-                            },
-                            {
-                                name: 'deleteDialogDialogConfirmationText',
-                                title: "Are you sure you want to delete this Query Replacement?",
+                                name: 'replacementStatusDisabled',
+                                title: "Disabled",
                                 type: 'string'
                             },
                         ],
@@ -624,7 +745,8 @@ export default defineType({
                         name: 'spellCorrectionBlocklist',
                         title: 'Spell Correction Block list',
                         type: 'object',
-                        fields: [{
+                        fields: [
+                            {
                                 name: 'pageTitle',
                                 title: "Spell Correction Blocklist | Search Management Console",
                                 type: 'string'
@@ -642,6 +764,11 @@ export default defineType({
                             {
                                 name: 'pageSubHeader',
                                 title: "Searching for any keyword in the group returns the same results for all keywords",
+                                type: 'string'
+                            },
+                            {
+                                name: 'learnMoreLink',
+                                title: "https://help.searchspring.net/hc/en-us/articles/206607636-Ignore-Terms",
                                 type: 'string'
                             },
                             {
@@ -700,12 +827,12 @@ export default defineType({
                                 type: 'string'
                             },
                             {
-                                name: 'deleteDialogDialogTitle',
+                                name: 'deleteDialogTitle',
                                 title: "Confirm Delete",
                                 type: 'string'
                             },
                             {
-                                name: 'deleteDialogActionButtonLabel',
+                                name: 'deleteDialogActionButtonCancelLabel',
                                 title: "Cancel",
                                 type: 'string'
                             },
@@ -715,12 +842,12 @@ export default defineType({
                                 type: 'string'
                             },
                             {
-                                name: 'deleteDialogDialogContentText',
+                                name: 'deleteDialogContentText',
                                 title: "Removing a Term",
                                 type: 'string'
                             },
                             {
-                                name: 'deleteDialogDialogConfirmationText',
+                                name: 'deleteDialogConfirmationText',
                                 title: "Are you sure you want to delete this Term?",
                                 type: 'string'
                             },
@@ -736,7 +863,22 @@ export default defineType({
                             },
                             {
                                 name: 'createFormCreateTitle',
-                                title: "Blocked Spell Correct Term",
+                                title: "Add Blocked Spell Correct Term",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormEditTitle',
+                                title: "Edit Blocked Spell Correct Term",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormNote',
+                                title: "Note",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormNoteContent',
+                                title: "Ignore this term when performing Integrated Spell Correction",
                                 type: 'string'
                             },
                             {
@@ -750,18 +892,284 @@ export default defineType({
                                 type: 'string'
                             },
                             {
-                                name: 'discardFilterButtonLabel',
+                                name: 'createFormDiscardFilterButtonLabel',
                                 title: "Discard",
                                 type: 'string'
                             },
                             {
-                                name: 'createSpellCorrectionBlocklistButtonLabel',
+                                name: 'createFormCreateSpellCorrectionBlocklistButtonLabel',
                                 title: "Create Blocked Term",
                                 type: 'string'
                             },
                             {
-                                name: 'editSpellCorrectionBlocklistButtonLabel',
+                                name: 'createFormEditSpellCorrectionBlocklistButtonLabel',
                                 title: "Edit Blocked Term",
+                                type: 'string'
+                            },
+                        ],
+                        options: {
+                            collapsible: true, // Enable collapsible
+                            collapsed: false // Whether it starts out collapsed (default is false)
+                        }
+                    },
+                    {
+                        name: 'synonyms',
+                        title: 'Synonyms',
+                        type: 'object',
+                        fields: [
+                            {
+                                name: 'pageTitle',
+                                title: "Synonyms | Search Management Console",
+                                type: 'string'
+                            },
+                            {
+                                name: 'pageDescription',
+                                title: "Synonyms | Search Management Console",
+                                type: 'string'
+                            },
+                            {
+                                name: 'pageHeader',
+                                title: "Synonyms",
+                                type: 'string'
+                            },
+                            {
+                                name: 'pageSubHeader',
+                                title: "Placeholder text for synonyms",
+                                type: 'string'
+                            },
+                            {
+                                name: 'learnMoreLink',
+                                title: "https://help.searchspring.net/hc/en-us/articles/115000313766-Synonyms",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormSnackbarSuccessLabel',
+                                title: "Synonyms successfully created",
+                                type: 'string'
+                            },
+                            {
+                                name: 'editFormSnackbarSuccessLabel',
+                                title: "Synonyms successfully updated",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogSnackbarSuccessLabel',
+                                title: "Synonyms Deleted",
+                                type: 'string'
+                            },
+                            {
+                                name: 'oneWaySynonymsAddButtonLabel',
+                                title: "New One-Way Synonyms",
+                                type: 'string'
+                            },
+                            {
+                                name: 'groupSynonymsAddButtonLabel',
+                                title: "New Grouped Synonyms",
+                                type: 'string'
+                            },
+                            {
+                                name: "filterListMenuActionEditLabel",
+                                title: "Edit Field",
+                                type: 'string'
+                            },
+                            {
+                                name: 'filterListMenuActionDeleteLabel',
+                                title: "Delete Field",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogDialogTitle',
+                                title: "Confirm Delete",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogDialogActionButtonLabel',
+                                title: "Cancel",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogDialogActionButtonDeleteLabel',
+                                title: "Confirm Delete",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogDialogContentText',
+                                title: "Removing a Synonym",
+                                type: 'string'
+                            },
+                            {
+                                name: 'deleteDialogDialogConfirmationText',
+                                title: "Are you sure you want to delete this Synonym?",
+                                type: 'string'
+                            },
+                            {
+                                name: 'tabLabel',
+                                title: "Synonyms",
+                                type: 'string'
+                            },
+                            {
+                                name: 'listColumnTermsLabel',
+                                title: "Terms",
+                                type: 'string'
+                            },
+                            {
+                                name: 'listColumnStatusLabel',
+                                title: "Status",
+                                type: 'string'
+                            },
+                            {
+                                name: 'listColumnOptionsLabel',
+                                title: "Options",
+                                type: 'string'
+                            },
+                            {
+                                name: 'tabPanelSubheaderLabel',
+                                title: "Searching for any keyword in the group returns the same results for all keywords",
+                                type: 'string'
+                            },
+                            {
+                                name: 'tabPanelHeaderLabel',
+                                title: "One-way Synonyms",
+                                type: 'string'
+                            },
+                            {
+                                name: 'searchPlaceholder',
+                                title: "Search synonym",
+                                type: 'string'
+                            },
+                            {
+                                name: 'emptyGroupSynonymsListTitle',
+                                title: "Build Your Synonym Library",
+                                type: 'string'
+                            },
+                            {
+                                name: 'emptyGroupSynonymsListSubtitle',
+                                title: "Enable similar word search, and improve search behavior by adding new fields to your search management",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormGroupedSynonymsKeywordLabel',
+                                title: "Type Synonyms Here",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormGroupedSynonymsPlaceholder',
+                                title: "Type query here",
+                                type: 'string'
+                            },
+                            {
+                                name: 'groupedSynonymsCreateFormDiscardFilterButtonLabel',
+                                title: "Discard",
+                                type: 'string'
+                            },
+                            {
+                                name: 'groupedSynonymsCreateFormCreateSynonymsButtonLabel',
+                                title: "Create Grouped Synonym",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormEditGroupedSynonymsButtonLabel',
+                                title: "Edit Grouped Synonym",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormOneWaySynonymsKeywordLabel',
+                                title: "Searching for:",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormOneWaySynonymsPlaceholder',
+                                title: "Type query here",
+                                type: 'string'
+                            },
+                            {
+                                name: 'oneWaySynonymsCreateFormDiscardFilterButtonLabel',
+                                title: "Discard",
+                                type: 'string'
+                            },
+                            {
+                                name: 'oneWaySynonymsCreateFormCreateSynonymsButtonLabel',
+                                title: "Create One-Way Synonym",
+                                type: 'string'
+                            },
+                            {
+                                name: 'createFormEditOneWaySynonymsButtonLabel',
+                                title: "Edit One-Way Synonym",
+                                type: 'string'
+                            },
+                            {
+                                name: 'groupedSynonymsCreateEditFormNoteContent',
+                                title: "Changes will take effect the next time your index is updated.",
+                                type: 'string'
+                            },
+                            {
+                                name: 'groupSynonymsCreateFormCreateTitle',
+                                title: "New Grouped Synonym",
+                                type: 'string'
+                            },
+                            {
+                                name: 'groupSynonymsCreateFormEditTitle',
+                                title: "Edit Grouped Synonym",
+                                type: 'string'
+                            },
+                            {
+                                name: 'groupSynonymsCreateFormInfoSubTitle',
+                                title: "Grouped synonyms specify equivalent keywords that will return the same results for all keywords",
+                                type: 'string'
+                            },
+                            {
+                                name: 'groupSynonymsCreateFormExampleLabel',
+                                title: "Example: ",
+                                type: 'string'
+                            },
+                            {
+                                name: 'groupSynonymsCreateFormExampleContent',
+                                title: "Searching for \"t-shirt\", \"crew\", \"tee\", and \"v-neck\" will all return the same results",
+                                type: 'string'
+                            },
+                            {
+                                name: 'oneWaySynonymsCreateFormInfoTitle',
+                                title: "One-Way Synonym",
+                                type: 'string'
+                            },
+                            {
+                                name: 'oneWaySynonymsCreateFormInfoSubTitle',
+                                title: "One way synonyms are useful for including more specific results in a broad search query",
+                                type: 'string'
+                            },
+                            {
+                                name: 'oneWaySynonymsCreateFormExampleContent',
+                                title: "When searching for \"fruit\", you want to show results for \"strawberry\", \"banana\", and \"apple\", but you would not want bananas to show up when someone searches for \"apple\"",
+                                type: 'string'
+                            },
+                            {
+                                name: 'oneWaySynonymsCreateFormCreateTitle',
+                                title: "New  One-Way Synonym",
+                                type: 'string'
+                            },
+                            {
+                                name: 'oneWaySynonymsCreateFormEditTitle',
+                                title: "Edit  One-Way Synonym",
+                                type: 'string'
+                            },
+                            {
+                                name: 'oneWaySynonymsCreateFormCreateOneWaySynonymsButtonLabel',
+                                title: "Create One-Way Synonym",
+                                type: 'string'
+                            },
+                            {
+                                name: 'oneWaySynonymsCreateFormEditOneWaySynonymsButtonLabel',
+                                title: "Create One-Way Synonym",
+                                type: 'string'
+                            },
+                            {
+                                name: 'oneWaySynonymsCreateFormSearchingforLabel',
+                                title: "Searching for:",
+                                type: 'string'
+                            },
+                            {
+                                name: 'oneWaySynonymsCreateFormAlsoReturnsResultsLabel',
+                                title: "Also Returns Results for:",
                                 type: 'string'
                             },
                         ],
