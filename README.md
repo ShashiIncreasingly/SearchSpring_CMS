@@ -13,10 +13,12 @@
 # sanity dataset create myproduction
 # sanity dataset import production.tar.gz production
 
+# npx sanity deploy
 
 # https://gsak1hga.apicdn.sanity.io/v1/data/query/production?query=*[value=="en-us"]
 
 # https://gsak1hga.apicdn.sanity.io/v1/data/query/production?query=*[value=="en-us"][locale=="en-US"][_type == "locale"]
+
 
 
 
