@@ -12,7 +12,7 @@
 # sanity logout && sanity login
 # sanity dataset create myproduction
 # sanity dataset import production.tar.gz production
-
+# sanity build or npm run build
 # npx sanity deploy
 
 # https://gsak1hga.apicdn.sanity.io/v1/data/query/production?query=*[value=="en-us"]
