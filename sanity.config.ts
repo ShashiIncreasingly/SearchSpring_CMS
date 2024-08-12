@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'SearchSpring_Management_Console',
 
-  projectId: 'gsak1hga',
+  projectId: 'gqlrwvgr',
   dataset: 'production',
 
   plugins: [
