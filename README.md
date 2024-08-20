@@ -15,10 +15,16 @@
 # sanity build or npm run build
 # npx sanity deploy
 
+
+# npm install @sanity/ui @sanity/form-builder @reach/auto-id
+# npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
+# npm install @sanity/form-builder
+# npm install @sanity/form-builder
+# 
 # https://gsak1hga.apicdn.sanity.io/v1/data/query/production?query=*[value=="en-us"]
 
 # https://gsak1hga.apicdn.sanity.io/v1/data/query/production?query=*[value=="en-us"][locale=="en-US"][_type == "locale"]
 
 
 
-
+# npm install @sanity/client xlsx

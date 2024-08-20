@@ -4,6 +4,7 @@ import application from './translationsSchema/application/application';
 import breadcrumbs from './translationsSchema/breadcrumbs/breadcrumbs';
 import features from './translationsSchema/features/features';
 import form from './translationsSchema/form/form';
+import JsonFileInput from '../components/JsonFileInput';
 
 export default defineType({
   name: 'locale',
@@ -30,13 +31,24 @@ export default defineType({
       validation: Rule => Rule.required(),
     },
     {
+      name: 'jsonFile',
+      title: 'JSON File',
+      type: 'file',
+      options: {
+        accept: '.json', // Restrict file types to JSON
+      },
+      components: {
+        input: JsonFileInput, // Custom input component
+      },
+    },
+    {
       name: 'application',
       title: 'Application',
       type: 'application',  // Use the imported application schema
       fieldset: 'translations',
       options: {
-        collapsible: true, // Enable collapsible
-        collapsed: false   // Whether it starts out collapsed (default is false)
+        collapsible: true, 
+        collapsed: false   
       }
     },
     {
@@ -45,8 +57,8 @@ export default defineType({
       type: 'breadcrumbs',
       fieldset: 'translations', 
       options: {
-        collapsible: true, // Enable collapsible
-        collapsed: true   // Whether it starts out collapsed (default is false)
+        collapsible: true, 
+        collapsed: true   
       }
     },
     {
@@ -55,8 +67,8 @@ export default defineType({
       type: 'features',
       fieldset: 'translations',
       options: {
-        collapsible: true, // Enable collapsible
-        collapsed: true   // Whether it starts out collapsed (default is false)
+        collapsible: true, 
+        collapsed: true   
       }
     },
     {
@@ -65,8 +77,8 @@ export default defineType({
       type: 'form',
       fieldset: 'translations',
       options: {
-        collapsible: true, // Enable collapsible
-        collapsed: true   // Whether it starts out collapsed (default is false)
+        collapsible: true, 
+        collapsed: true   
       }
     },
   ],
