@@ -21,6 +21,8 @@
 # npm install @sanity/form-builder
 # npm install @sanity/form-builder
 # 
+
+# optional - sanity install json-to-docs
 # https://gsak1hga.apicdn.sanity.io/v1/data/query/production?query=*[value=="en-us"]
 
 # https://gsak1hga.apicdn.sanity.io/v1/data/query/production?query=*[value=="en-us"][locale=="en-US"][_type == "locale"]

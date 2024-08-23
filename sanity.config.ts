@@ -5,8 +5,8 @@ import { schemaTypes } from './schemaTypes';
 import locale from './schemaTypes/locale';
 import JsonFileInput from './components/JsonFileInput';
 export default defineConfig({
-  name: 'default',
-  title: 'My Sanity Studio',
+  name: 'SearchSpring_Management_Console',
+  title: 'SearchSpring Management Console',
   projectId: 'abc5you0',
   dataset: 'production',
   plugins: [deskTool(), visionTool()],

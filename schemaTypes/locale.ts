@@ -5,6 +5,7 @@ import breadcrumbs from './translationsSchema/breadcrumbs/breadcrumbs';
 import features from './translationsSchema/features/features';
 import form from './translationsSchema/form/form';
 import JsonFileInput from '../components/JsonFileInput';
+import JsonFileInputWithLocaleProvider from '../components/JsonFileInputWithLocaleProvider';
 
 export default defineType({
   name: 'locale',
@@ -38,7 +39,7 @@ export default defineType({
         accept: '.json', // Restrict file types to JSON
       },
       components: {
-        input: JsonFileInput, // Custom input component
+        input: JsonFileInputWithLocaleProvider,
       },
     },
     {
